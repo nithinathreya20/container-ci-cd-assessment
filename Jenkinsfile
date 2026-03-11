@@ -5,13 +5,13 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/USERNAME/REPO.git'
+                git 'https://github.com/nithinathreya20/container-ci-cd-assessment.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t USERNAME/REGISTER_ROLL .'
+                sh 'docker build -t 2023bcs0103nithin/2023bcs0103 .'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push USERNAME/REGISTER_ROLL'
+                sh 'docker push 2023bcs0103nithin/2023bcs0103'
             }
         }
 
