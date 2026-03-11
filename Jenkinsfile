@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/nithinathreya20/container-ci-cd-assessment.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t 2023bcs0103nithin/2023bcs0103 .'
